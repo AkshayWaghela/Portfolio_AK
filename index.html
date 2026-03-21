@@ -3,80 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Science Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Data Scientist Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
     }
+
     header {
-      padding: 2rem;
-      text-align: center;
-      background: #020617;
-    }
-    header h1 { font-size: 2.5rem; }
-    header p { color: #94a3b8; }
-    nav {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 8%;
+      background: #000;
     }
+
+    header h1 { font-size: 1.5rem; }
+
     nav a {
-      color: #38bdf8;
+      margin-left: 2rem;
       text-decoration: none;
-      font-weight: 500;
+      color: #ccc;
+      transition: 0.3s;
     }
-    section {
-      padding: 3rem 10%;
+
+    nav a:hover { color: #00f5c4; }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5rem 8%;
     }
-    .projects {
+
+    .hero-text h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text span { color: #00f5c4; }
+
+    .hero-text p { color: #aaa; max-width: 500px; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      background: #00f5c4;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    section { padding: 4rem 8%; }
+
+    h2.section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .about {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
     }
-    .card {
-      background: #020617;
-      padding: 1.5rem;
-      border-radius: 1rem;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
+
     .skills span {
       display: inline-block;
-      background: #1e293b;
+      background: #111;
       padding: 0.5rem 1rem;
       margin: 0.3rem;
-      border-radius: 999px;
+      border-radius: 20px;
       font-size: 0.9rem;
     }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: #1a1a1a;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
-      background: #020617;
-      margin-top: 2rem;
+      background: #000;
+      color: #888;
     }
-    button {
-      background: #38bdf8;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      margin-top: 1rem;
+
+    @media(max-width: 768px) {
+      .hero { flex-direction: column; text-align: center; }
+      .about { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Your Name</h1>
-  <p>Data Science Enthusiast | Machine Learning | Python</p>
+  <h1>YourName</h1>
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -85,53 +124,58 @@
   </nav>
 </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>I am a passionate data science fresher skilled in Python, machine learning, and data analysis. I enjoy solving real-world problems using data.</p>
+<section class="hero">
+  <div class="hero-text">
+    <h2>Hello, I'm <span>Your Name</span></h2>
+    <p>A passionate Data Scientist focused on machine learning, data analytics, and building impactful solutions using data.</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </div>
 </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="card">
-      <h3>House Price Prediction</h3>
-      <p>Built a regression model using scikit-learn.</p>
-      <button onclick="alert('Add GitHub link')">View</button>
-    </div>
-    <div class="card">
-      <h3>Customer Segmentation</h3>
-      <p>Used K-Means clustering for segmentation.</p>
-      <button onclick="alert('Add GitHub link')">View</button>
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about">
+    <p>I am a data science fresher with strong skills in Python, machine learning, and data visualization. I enjoy turning raw data into meaningful insights and building predictive models.</p>
+    <div class="skills">
+      <span>Python</span>
+      <span>Pandas</span>
+      <span>NumPy</span>
+      <span>Scikit-learn</span>
+      <span>SQL</span>
+      <span>Power BI</span>
+      <span>TensorFlow</span>
     </div>
   </div>
 </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Python</span>
-    <span>Pandas</span>
-    <span>NumPy</span>
-    <span>Machine Learning</span>
-    <span>SQL</span>
-    <span>Power BI</span>
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>House Price Prediction</h3>
+      <p>Built regression model achieving high accuracy using sklearn.</p>
+    </div>
+    <div class="card">
+      <h3>Customer Segmentation</h3>
+      <p>Applied clustering techniques to identify customer groups.</p>
+    </div>
+    <div class="card">
+      <h3>Sales Dashboard</h3>
+      <p>Created interactive dashboard using Power BI.</p>
+    </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
+  <h2 class="section-title">Contact</h2>
   <p>Email: your.email@example.com</p>
   <p>GitHub: github.com/yourusername</p>
   <p>LinkedIn: linkedin.com/in/yourprofile</p>
 </section>
 
 <footer>
-  <p>© 2026 Your Name</p>
+  <p>© 2026 Your Name | Data Scientist Portfolio</p>
 </footer>
-
-<script>
-  console.log("Portfolio Loaded");
-</script>
 
 </body>
 </html>
