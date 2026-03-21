@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Science Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: #020617;
+    }
+    header h1 { font-size: 2.5rem; }
+    header p { color: #94a3b8; }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    section {
+      padding: 3rem 10%;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #020617;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .skills span {
+      display: inline-block;
+      background: #1e293b;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #020617;
+      margin-top: 2rem;
+    }
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Your Name</h1>
+  <p>Data Science Enthusiast | Machine Learning | Python</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a passionate data science fresher skilled in Python, machine learning, and data analysis. I enjoy solving real-world problems using data.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>House Price Prediction</h3>
+      <p>Built a regression model using scikit-learn.</p>
+      <button onclick="alert('Add GitHub link')">View</button>
+    </div>
+    <div class="card">
+      <h3>Customer Segmentation</h3>
+      <p>Used K-Means clustering for segmentation.</p>
+      <button onclick="alert('Add GitHub link')">View</button>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Python</span>
+    <span>Pandas</span>
+    <span>NumPy</span>
+    <span>Machine Learning</span>
+    <span>SQL</span>
+    <span>Power BI</span>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: your.email@example.com</p>
+  <p>GitHub: github.com/yourusername</p>
+  <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</section>
+
+<footer>
+  <p>© 2026 Your Name</p>
+</footer>
+
+<script>
+  console.log("Portfolio Loaded");
+</script>
+
+</body>
+</html>
